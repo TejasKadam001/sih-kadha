@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 460" width="100%" height="100%">
+  <defs>
+    <!-- Soft Contact Floor Shadow -->
+    <radialGradient id="shadow_K-02" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#08120a" stop-opacity="0.65" />
+      <stop offset="50%" stop-color="#08120a" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#08120a" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Conical Body Cylinder Gradient -->
+    <linearGradient id="bodyGrad_K-02" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#292114" />
+      <stop offset="15%" stop-color="#54462e" />
+      <stop offset="45%" stop-color="#7a6846" />
+      <stop offset="70%" stop-color="#54462e" />
+      <stop offset="100%" stop-color="#292114" />
+    </linearGradient>
+
+    <!-- Base Sealing Rim Gradient -->
+    <linearGradient id="rimGrad_K-02" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b9488" />
+      <stop offset="20%" stop-color="#e4eae2" />
+      <stop offset="45%" stop-color="#ffffff" />
+      <stop offset="70%" stop-color="#c8d2c6" />
+      <stop offset="100%" stop-color="#788275" />
+    </linearGradient>
+
+    <!-- Top Cap Gradient -->
+    <linearGradient id="topCapGrad_K-02" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7a6846" />
+      <stop offset="40%" stop-color="#54462e" />
+      <stop offset="100%" stop-color="#292114" />
+    </linearGradient>
+
+    <!-- Top Foil Lid Radial -->
+    <radialGradient id="foilGrad_K-02" cx="48%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8" />
+      <stop offset="35%" stop-color="#52432b" />
+      <stop offset="85%" stop-color="#292114" />
+      <stop offset="100%" stop-color="#0a130c" />
+    </radialGradient>
+
+    <!-- Herringbone/Chevron Texture -->
+    <pattern id="herringbone_K-02" width="24" height="16" patternUnits="userSpaceOnUse">
+      <path d="M 0 8 L 12 0 L 24 8 L 12 16 Z" fill="none" stroke="#ffffff" stroke-width="0.75" opacity="0.12" />
+      <path d="M 0 0 L 12 8 L 24 0" fill="none" stroke="#000000" stroke-width="0.8" opacity="0.15" />
+      <path d="M 0 16 L 12 8 L 24 16" fill="none" stroke="#000000" stroke-width="0.8" opacity="0.15" />
+    </pattern>
+
+    <!-- Soft Matte Curved Highlight -->
+    <linearGradient id="matteShine_K-02" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- 1. Ambient & Contact Shadow -->
+  <ellipse cx="250" cy="398" rx="165" ry="30" fill="url(#shadow_K-02)" />
+  <ellipse cx="250" cy="394" rx="120" ry="16" fill="#050c06" opacity="0.6" />
+
+  <!-- 2. Bottom Sealing Flange / Rim -->
+  <path d="M 100 376 C 100 354 400 354 400 376 C 400 398 100 398 100 376 Z" fill="#071008" opacity="0.75" />
+  <path d="M 102 372 C 102 352 398 352 398 372 C 398 394 102 394 102 372 Z" fill="url(#rimGrad_K-02)" />
+  <ellipse cx="250" cy="371" rx="138" ry="14" fill="#bdc7b9" />
+  <ellipse cx="250" cy="370" rx="130" ry="12" fill="#292114" />
+
+  <!-- 3. Tapered Conical Body of the Coffee Pod -->
+  <path d="M 125 368 L 165 178 C 165 178 335 178 335 178 L 375 368 C 375 368 250 388 125 368 Z" fill="url(#bodyGrad_K-02)" />
+  <path d="M 125 368 L 165 178 C 165 178 335 178 335 178 L 375 368 C 375 368 250 388 125 368 Z" fill="url(#herringbone_K-02)" />
+
+  <!-- Side Shadow Contours -->
+  <path d="M 125 368 L 165 178 C 180 178 195 179 195 179 L 160 372 C 145 370 132 369 125 368 Z" fill="#000000" opacity="0.26" />
+  <path d="M 375 368 L 335 178 C 320 178 305 179 305 179 L 340 372 C 355 370 368 369 375 368 Z" fill="#000000" opacity="0.28" />
+  <path d="M 220 178 L 210 376 C 235 378 265 378 290 376 L 280 178 Z" fill="url(#matteShine_K-02)" />
+
+  <!-- 4. Stepped Top Shoulder -->
+  <ellipse cx="250" cy="178" rx="85" ry="22" fill="#152317" />
+  <ellipse cx="250" cy="174" rx="83" ry="20" fill="url(#topCapGrad_K-02)" />
+
+  <path d="M 172 172 L 178 142 C 178 142 322 142 322 142 L 328 172 Z" fill="url(#bodyGrad_K-02)" />
+  <path d="M 172 172 L 178 142 C 178 142 322 142 322 142 L 328 172 Z" fill="url(#herringbone_K-02)" />
+
+  <!-- 5. Top Foil Sealing Lid -->
+  <ellipse cx="250" cy="140" rx="76" ry="34" fill="url(#rimGrad_K-02)" />
+  <ellipse cx="250" cy="140" rx="71" ry="31" fill="url(#foilGrad_K-02)" />
+
+  <ellipse cx="250" cy="140" rx="63" ry="26" fill="none" stroke="#e4cc92" stroke-width="1.4" opacity="0.85" />
+  <ellipse cx="250" cy="140" rx="58" ry="23" fill="none" stroke="#ffffff" stroke-width="0.7" opacity="0.45" stroke-dasharray="2,2" />
+
+  <!-- Foil Graphic & Botanical Emblem -->
+  <g text-anchor="middle" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif">
+    <path d="M 250 120 C 245 124 243 128 250 133 C 257 128 255 124 250 120 Z" fill="#e4cc92" />
+    <circle cx="250" cy="122" r="2" fill="#ffffff" />
+
+    <rect x="226" y="128" width="48" height="15" rx="7.5" fill="#081209" stroke="#e4cc92" stroke-width="1" />
+    <text x="250" y="139" fill="#ffffff" font-size="9.5" font-weight="700" letter-spacing="0.06em">K-02</text>
+
+    <text x="250" y="151" fill="#ffffff" font-size="8.5" font-weight="700" letter-spacing="0.04em">DASHMOOL KADHA</text>
+    <text x="250" y="159" fill="#e4cc92" font-size="6.5" font-weight="600" letter-spacing="0.08em">AFI · 4:1 EXTRACT</text>
+  </g>
+
+  <!-- 6. Front Body Emblem Pill -->
+  <g transform="translate(250, 276)">
+    <rect x="-82" y="-34" width="164" height="68" rx="16" fill="#0c180e" fill-opacity="0.88" stroke="rgba(255,255,255,0.24)" stroke-width="1.2" />
+    <path d="M -80 -16 C -35 -26 35 -26 80 -16" stroke="rgba(255,255,255,0.35)" stroke-width="1.2" fill="none" />
+
+    <rect x="-28" y="-24" width="56" height="16" rx="8" fill="#e4cc92" />
+    <text x="0" y="-13" text-anchor="middle" fill="#0b160d" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" letter-spacing="0.08em">K-02</text>
+
+    <text x="0" y="6" text-anchor="middle" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="13.5" font-weight="600" letter-spacing="-0.01em">Dashmool Kadha</text>
+    <text x="0" y="22" text-anchor="middle" fill="#b8c8b4" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="500" letter-spacing="0.05em">10-ROOT HERBAL · 4:1 REDUCTION</text>
+  </g>
+</svg>

@@ -419,4 +419,3 @@ SIH/
 - **The Ayurvedic Pharmacopoeia of India (API):** Part I (Single Drugs) & Part II (Formulations), First Edition, Ministry of Health and Family Welfare / Ministry of Ayush.
 - **All India Institute of Ayurveda (AIIA):** Guidelines on Quality Control, Good Dispensing Practices, and Clinical Standardization of Extemporaneous Decoctions.
 - **International Standard IS 460-1:** *Specification for Test Sieves (Part 1: Wire Cloth Test Sieves)*, Bureau of Indian Standards (BIS).
-# sih-kadha

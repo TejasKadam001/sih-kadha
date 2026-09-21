@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>iKwath · HERB</title>
+  <meta name="description" content="Smart appliance and mobile app for fresh, standardized Ayurvedic Kadha decoctions.">
+
+  <!-- Android & Web App Optimization Meta Tags -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#F7F5EE">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Simple Clean Sans-Serif Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-cafe">
+
+  <!-- App Viewport Container (Full Frame Always) -->
+  <main class="device-viewport-wrapper" id="viewportWrapper">
+    <div class="android-device-chassis" id="deviceChassis">
+      <!-- App Screen Container -->
+      <div class="app-screen-container" id="appScreenContainer">
+
+        <!-- ==============================================
+             SCREEN 1: PURE INTRO — SMOOTH CINEMATIC BLUR
+             ============================================== -->
+        <section class="screen-view active" id="splashScreen" aria-label="Intro Screen">
+          <div class="splash-center-content">
+            <div class="logo-artwork-wrapper" id="splashLogoWrap">
+              <img src="assets/logo_transparent.png" alt="HERB Logo" class="splash-logo-img" id="splashLogoImg">
+            </div>
+          </div>
+        </section>
+
+
+        <!-- ==============================================
+             SCREEN 2: GET STARTED ONBOARDING PAGE
+             ============================================== -->
+        <section class="screen-view" id="authScreen" aria-label="Get Started">
+          <div class="minimal-auth-container">
+            
+            <div class="minimal-auth-top">
+              <div class="auth-brand-emblem">
+                <img src="assets/logo_transparent.png" alt="HERB Logo" class="auth-logo-header">
+              </div>
+              <h1 class="minimal-auth-title">Get Started</h1>
+              <p class="minimal-auth-sub">Create your profile to begin your brewing ritual</p>
+            </div>
+
+            <!-- Clean Minimalist Get Started Form -->
+            <form class="minimal-form" id="authForm" onsubmit="event.preventDefault(); return false;">
+              
+              <div class="minimal-input-field">
+                <label for="authName" class="field-label">Name</label>
+                <input type="text" id="authName" value="Tejas Kadam" placeholder="Your full name" required autocomplete="name">
+                <span class="field-line"></span>
+              </div>
+
+              <div class="minimal-input-field">
+                <label for="authEmail" class="field-label">Email</label>
+                <input type="email" id="authEmail" value="tejaskadam@gmail.com" placeholder="name@domain.com" required autocomplete="email">
+                <span class="field-line"></span>
+              </div>
+
+              <div class="minimal-input-field">
+                <div class="field-label-row">
+                  <label for="authPassword" class="field-label">Password</label>
+                </div>
+                <div class="password-input-wrap">
+                  <input type="password" id="authPassword" value="••••••••••••" placeholder="Create a password" required autocomplete="current-password">
+                  <button type="button" class="minimal-eye-toggle" id="togglePasswordBtn" aria-label="Toggle password">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  </button>
+                </div>
+                <span class="field-line"></span>
+              </div>
+
+              <button type="submit" class="btn-minimal-submit" id="authContinueBtn">
+                <span>Get Started</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+
+              <div class="minimal-divider">
+                <span>or</span>
+              </div>
+
+              <button type="button" class="btn-minimal-google" id="googleSignInBtn">
+                <svg class="google-icon" width="17" height="17" viewBox="0 0 24 24">
+                  <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                  <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.26v3.15C3.25 21.36 7.33 24 12 24z"/>
+                  <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.26C.46 8.16 0 9.99 0 12s.46 3.84 1.26 5.42l4.02-3.15z"/>
+                  <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.25 2.64 1.26 6.58l4.02 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                </svg>
+                <span>Continue with Google</span>
+              </button>
+            </form>
+
+            <div class="minimal-auth-footer">
+              <span class="auth-fine-text">Certified Ayurvedic Quality</span>
+            </div>
+
+          </div>
+        </section>
+
+
+        <!-- ==============================================
+             SCREEN 3: MAIN APP
+             ============================================== -->
+        <section class="screen-view" id="mainAppScreen" aria-label="Main Application">
+
+          <!-- Minimal Topbar with Logo, Camera Scan Icon, and Notification Bell with Red Dot -->
+          <header class="app-minimal-topbar">
+            <div class="topbar-logo-box">
+              <img src="assets/logo_transparent.png" alt="HERB" class="topbar-brand-logo">
+            </div>
+            <div class="topbar-actions">
+              <!-- Pod Section with Camera Icon -->
+              <button class="minimal-icon-btn" id="cameraScanBtn" title="Scan Pod with Camera">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                  <circle cx="12" cy="13" r="4"/>
+                </svg>
+              </button>
+              <!-- Notification Bell with Red Dot when complete -->
+              <button class="minimal-icon-btn bell-btn" id="notifBellBtn" title="Notifications">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                  <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                </svg>
+                <span class="notif-red-dot" id="notifRedDot"></span>
+              </button>
+            </div>
+          </header>
+
+          <!-- TAB 1: BREW / HOME -->
+          <div class="tab-page-content active" id="tabBrew">
+            
+            <!-- Spacious Dynamic Greeting Section (Good morning / afternoon / night based on time) -->
+            <div class="spacious-greeting-section">
+              <h1 class="dynamic-greeting-heading" id="dynamicGreetingHeading">Good morning</h1>
+              <p class="dynamic-greeting-thought" id="dynamicGreetingThought">"A warm cup of kadha brings gentle balance to start your day."</p>
+            </div>
+
+            <!-- Daily Decoction Hero: Left Text, Right White Rounded Pod Image -->
+            <article class="hero-split-card">
+              <div class="hero-left-content">
+                <h3 class="hero-clean-title">Daily Decoction</h3>
+                <p class="hero-clean-sub">Fresh Ayurvedic Kadha at 85–90°C</p>
+                <button class="btn-minimal-pill" id="heroStartCycleBtn">
+                  <span>Start Brew</span>
+                </button>
+              </div>
+              <div class="hero-right-media">
+                <div class="white-pod-frame">
+                  <img src="assets/warm_cup.jpg" alt="Aesthetic herbal pod" class="white-pod-img">
+                </div>
+              </div>
+            </article>
+
+            <!-- Active Pod Section with Interactive Dropdown inside App -->
+            <section class="dropdown-pod-section" id="dropdownPodSection">
+              <div class="active-pod-trigger" id="activePodTrigger" role="button" aria-expanded="false" title="Click to choose kadha powder">
+                <div class="pod-image-wrap">
+                  <img src="assets/warm_cup.jpg" alt="Pod" class="pod-mini-img" id="activePodThumb">
+                </div>
+                <div class="pod-text-wrap">
+                  <span class="pod-eyebrow">ACTIVE KADHA POWDER</span>
+                  <h3 class="pod-name-clean" id="activePodName">Triphala Kadha</h3>
+                  <p class="pod-sub-clean" id="activePodIngredients">Amla, Haritaki, Bibhitaki</p>
+                </div>
+                <div class="dropdown-arrow-icon" id="dropdownArrow">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+              </div>
+
+              <!-- Animated Inside-App Dropdown Drawer -->
+              <div class="pod-dropdown-drawer" id="podDropdownDrawer">
+                <div class="drawer-inner" id="podDropdownList">
+                  <!-- Populated dynamically via JS -->
+                </div>
+              </div>
+            </section>
+
+            <!-- Extraction Cycle Card -->
+            <section class="minimal-brew-card">
+              <div class="brew-card-header">
+                <div>
+                  <span class="clean-micro-label">EXTRACTION CYCLE</span>
+                  <h3 class="brew-title-clean" id="cycleStateText">Ready</h3>
+                </div>
+                <div class="timer-countdown-badge" id="timerBadgeWrap">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  <span id="countdownTimer">12:00 left</span>
+                </div>
+              </div>
+
+              <!-- Smooth Completion Progress Bar -->
+              <div class="minimal-stepper-bar">
+                <div class="minimal-stepper-track">
+                  <div class="minimal-stepper-fill" id="stepperProgressBar" style="width: 0%;"></div>
+                </div>
+                <div class="minimal-steps-labels">
+                  <span class="min-step active" id="stepNode1">Soak</span>
+                  <span class="min-step" id="stepNode2">85°C</span>
+                  <span class="min-step" id="stepNode3">Reduce</span>
+                  <span class="min-step" id="stepNode4">Filter</span>
+                  <span class="min-step" id="stepNode5">Dispense</span>
+                </div>
+              </div>
+
+              <!-- Two Key Metrics: Temperature & Volume with Fluid Animations -->
+              <div class="minimal-metrics-duo">
+                <div class="metric-block">
+                  <span class="metric-name">TEMPERATURE</span>
+                  <div class="metric-num-line">
+                    <span class="metric-large" id="liveTempDisplay">24.5</span>
+                    <span class="metric-unit">°C</span>
+                  </div>
+                  <span class="metric-caption" id="tempBandBadge">85–90°C safe range</span>
+                </div>
+
+                <div class="metric-block">
+                  <span class="metric-name">VOLUME</span>
+                  <div class="metric-num-line">
+                    <span class="metric-large" id="liveVolumeDisplay">400</span>
+                    <span class="metric-unit">mL</span>
+                  </div>
+                  <span class="metric-caption">Target: 100 mL</span>
+                </div>
+              </div>
+
+              <!-- Subtle Live Chart -->
+              <div class="minimal-chart-wrap">
+                <canvas id="tempChartCanvas" width="340" height="90"></canvas>
+              </div>
+
+              <!-- Action Controls -->
+              <div class="minimal-action-row">
+                <button class="btn-minimal-start" id="cycleActionBtn">
+                  <span id="cycleBtnLabel">Begin Cycle</span>
+                </button>
+                <button class="btn-minimal-circle" id="rinseCycleBtn" title="Rinse Chamber">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg>
+                </button>
+                <button class="btn-minimal-circle abort" id="abortCycleBtn" title="Stop">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                </button>
+              </div>
+            </section>
+
+          </div>
+
+
+          <!-- TAB 2: KADHAS (Renamed from Pods - Where user selects Kadha powder) -->
+          <div class="tab-page-content" id="tabKadhas">
+            <div class="spacious-header">
+              <h2 class="serif-clean-title">Select Kadha Blend</h2>
+              <p class="clean-sub">Choose your pre-measured Kadha powder</p>
+            </div>
+
+            <div class="spacious-pods-grid" id="podsCatalogueList">
+              <!-- Populated via JS -->
+            </div>
+          </div>
+
+
+          <!-- TAB 3: JOURNAL -->
+          <div class="tab-page-content" id="tabJournal">
+            <div class="spacious-header">
+              <h2 class="serif-clean-title">Journal</h2>
+              <p class="clean-sub">Daily brewing history</p>
+            </div>
+
+            <div class="history-minimal-list" id="historyCardsGroup">
+              <!-- Populated via JS -->
+            </div>
+          </div>
+
+
+          <!-- TAB 4: PROFILE (Renamed from Fleet - Contains Tejas Kadam's details) -->
+          <div class="tab-page-content" id="tabProfile">
+            <div class="spacious-header">
+              <h2 class="serif-clean-title">Profile</h2>
+              <p class="clean-sub">User details & connected appliance</p>
+            </div>
+
+            <!-- Profile Info Card -->
+            <div class="profile-main-card">
+              <div class="profile-avatar-row">
+                <div class="profile-initials-avatar">
+                  <span id="profileUserInitials">TK</span>
+                </div>
+                <div class="profile-name-meta">
+                  <h3 class="profile-user-name" id="profileUserName">Tejas Kadam</h3>
+                  <span class="profile-user-email" id="profileUserEmail">tejaskadam@gmail.com</span>
+                </div>
+              </div>
+
+              <div class="profile-attributes-grid">
+                <div class="attribute-item">
+                  <span class="attribute-label">GENDER</span>
+                  <strong class="attribute-value">Male</strong>
+                </div>
+                <div class="attribute-item">
+                  <span class="attribute-label">STATUS</span>
+                  <strong class="attribute-value ok">Active Member</strong>
+                </div>
+                <div class="attribute-item">
+                  <span class="attribute-label">DEVICE</span>
+                  <strong class="attribute-value">iKwath Unit #01</strong>
+                </div>
+                <div class="attribute-item">
+                  <span class="attribute-label">REGIMEN</span>
+                  <strong class="attribute-value">Daily Kadha</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Connected Device Card -->
+            <div class="profile-device-card">
+              <div class="device-card-header">
+                <div>
+                  <span class="clean-micro-label">PAIRED APPLIANCE</span>
+                  <h4 class="device-title">iKwath HERB Unit 1</h4>
+                </div>
+                <span class="device-status-badge">Connected</span>
+              </div>
+              <div class="device-stats-line">
+                <span>Firmware: <strong>v2.4</strong></span>
+                <span>Chamber: <strong>Ready</strong></span>
+                <span>WiFi: <strong>Online</strong></span>
+              </div>
+            </div>
+
+            <!-- Scan Pod Shortcut with Camera -->
+            <div class="profile-camera-card" id="profileCameraTrigger">
+              <div class="cam-card-left">
+                <div class="cam-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                    <circle cx="12" cy="13" r="4"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong class="cam-card-title">Scan Kadha Pod</strong>
+                  <span class="cam-card-sub">Use camera to auto-select powder</span>
+                </div>
+              </div>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </div>
+
+            <!-- Scientific Research & Showcase Trigger -->
+            <div class="profile-camera-card" id="profileShowcaseTrigger" style="margin-top: 10px; cursor: pointer;">
+              <div class="cam-card-left">
+                <div class="cam-icon-box" style="background: rgba(30, 43, 29, 0.05); color: var(--color-brand);">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="2" y1="12" x2="22" y2="12"/>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong class="cam-card-title">Research & Technology</strong>
+                  <span class="cam-card-sub">Extraction kinetics, AFI guidelines & specs</span>
+                </div>
+              </div>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </div>
+          </div>
+
+
+          <!-- Minimal 4-Tab Bottom Dock (Brew, Kadhas, Journal, Profile) -->
+          <nav class="minimal-bottom-dock" aria-label="App Navigation">
+            <button class="dock-btn-minimal active" data-tab="tabBrew">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+              <span>Brew</span>
+            </button>
+            <button class="dock-btn-minimal" data-tab="tabKadhas">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L4.5 9c0 5 3.5 9 7.5 13 4-4 7.5-8 7.5-13L12 2z"/></svg>
+              <span>Kadhas</span>
+            </button>
+            <button class="dock-btn-minimal" data-tab="tabJournal">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              <span>Journal</span>
+            </button>
+            <button class="dock-btn-minimal" data-tab="tabProfile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <span>Profile</span>
+            </button>
+          </nav>
+
+        </section>
+
+
+        <!-- ==============================================
+             SCREEN 4: PUBLIC WEBSITE VIEW
+             ============================================== -->
+        <section class="screen-view" id="websiteShowcaseScreen" aria-label="Public Showcase">
+          <div class="website-top-bar">
+            <button class="btn-return-app" id="returnToAppBtn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              <span>Return to App</span>
+            </button>
+          </div>
+
+          <div class="website-scrollable-content">
+            <header class="web-hero-section">
+              <h1 class="web-hero-headline">Fresh Kadha in Minutes.</h1>
+              <p class="web-hero-sub">Standardized Ayurvedic decoctions adhering strictly to the 85–90°C gentle heat rule.</p>
+              <div class="web-hero-img-box">
+                <img src="assets/warm_cup.jpg" alt="iKwath warm cup" class="web-hero-img">
+              </div>
+            </header>
+
+            <section class="web-section">
+              <h2 class="web-sec-title">Extraction Kinetics</h2>
+              <p class="deep-desc">Water boils gently at 88.4°C under reduced pressure, preserving active herbal ingredients and reducing 400 mL to 100 mL in 12 minutes.</p>
+            </section>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- CAMERA SCANNER SIMULATOR MODAL -->
+  <dialog class="modal-overlay" id="cameraScanModal" aria-labelledby="cameraScanTitle">
+    <div class="modal-sheet">
+      <div class="modal-header">
+        <div class="cam-modal-title-row">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+          <h3 id="cameraScanTitle">Scan Kadha Pod</h3>
+        </div>
+        <button class="modal-close-btn" id="closeCameraModalBtn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="camera-viewfinder-sim">
+          <div class="viewfinder-corner top-left"></div>
+          <div class="viewfinder-corner top-right"></div>
+          <div class="viewfinder-corner bottom-left"></div>
+          <div class="viewfinder-corner bottom-right"></div>
+          <div class="scan-laser-line"></div>
+          <div class="viewfinder-caption">Align Kadha Pod QR Code or NFC Tag</div>
+        </div>
+        <p class="cam-scan-instruction">Tap to recognize pod formulation automatically</p>
+        <button class="btn-minimal-submit" id="simulateScanSuccessBtn">
+          <span>Scan Triphala Kadha Pod</span>
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast-popup" id="toastNotification" role="alert" aria-live="assertive">
+    <span class="toast-message" id="toastMessage">Notification</span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
