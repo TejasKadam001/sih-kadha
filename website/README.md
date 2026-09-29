@@ -5,13 +5,13 @@
 
 ***
 
-## 🌿 Overview
+## Overview
 
 **iKwath · HERB** is a smart appliance and mobile control surface that prepares fresh, standardized Ayurvedic decoctions (*Kwatha / Kadha*) in 12 minutes—strictly constrained to the classical **85–90°C Manda Agni (gentle heat)** temperature band using reduced-pressure vacuum boiling.
 
 ***
 
-## ✨ Features
+## Features
 
 * **Pure Logo Intro with Blur Transition**: Starts with the centered brand logo on a natural sage stone background (`#BBC0A9`), gently breathing, and smoothly blurs out into the login screen.
 
@@ -51,7 +51,7 @@
 
 ***
 
-## 🚀 How to Run the Project
+## How to Run the Project
 
 This project is built using pure **HTML5, CSS3, and modern JavaScript** with **zero external dependencies** or build steps required.
 
@@ -96,7 +96,7 @@ open /Users/tanmaykadam/Desktop/dex/CS/Hackathon/SIH/website/index.html
 
 ***
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 website/
@@ -117,7 +117,7 @@ website/
 
 ***
 
-## 📱 Presentation Tips for Evaluators
+## Presentation Tips for Evaluators
 
 1. **Android Screenshot Mode**: Use the **"Android Frame"** button on the top evaluator dock to switch between the framed phone chassis and full-screen view.
 2. **Replay Intro**: Click **"Replay Intro"** on the floating dock to showcase the smooth logo blur entrance.

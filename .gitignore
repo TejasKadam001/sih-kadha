@@ -1,0 +1,11 @@
+blehpcb/
+blehread/
+.DS_Store
+
+# KiCad
+.history/
+fp-info-cache
+
+# Local tooling and this file itself
+.claude/
+.gitignore
