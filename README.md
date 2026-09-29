@@ -167,31 +167,31 @@ The two gitignored folders are working material that lives only on the author's 
 The electronics are split into two boards so that sensitive analog measurement is isolated from inductive relay switching.
 
 ```mermaid
-graph LR
-    subgraph Power Board
-        AC[220V AC] --> PS1[12V 5A AC-DC supply]
-        PS1 --> F1[5A DC fuse]
-        F1 --> V12[12V bus]
-        V12 --> BUCK[LM2596 buck to 5V]
-        V12 --> RLY[Relays 1-7: heater, vacuum pump, recirculation pump, dispense pump, inlet valve, lid lock, exhaust fan]
+flowchart LR
+    subgraph PB["Power Board"]
+        AC["220V AC"] --> PS1["12V 5A AC-DC supply"]
+        PS1 --> F1["5A DC fuse"]
+        F1 --> V12["12V bus"]
+        V12 --> BUCK["LM2596 buck to 5V"]
+        V12 --> RLY["Relays 1-7: heater, vacuum pump, recirculation pump, dispense pump, inlet valve, lid lock, exhaust fan"]
     end
 
-    subgraph Control Board
-        MCU[ESP32 DevKit V1]
-        MCU --> DS[DS18B20 liquid temperature]
-        MCU --> HX[HX711 + load cell]
-        MCU --> NFC[MFRC522 NFC reader]
-        MCU --> I2C[I2C bus]
-        I2C --> OLED[SSD1306 OLED]
-        I2C --> BMP[BMP280 pressure]
-        I2C --> PCF[PCF8574 x2: relays, LEDs]
-        MCU --> TDS[Analog TDS sensor]
-        MCU --> SW[Limit switches: lid, boil-over, level]
-        MCU --> SRV[SG90 pod ejector]
+    subgraph CB["Control Board"]
+        MCU["ESP32 DevKit V1"]
+        MCU --> DS["DS18B20 liquid temperature"]
+        MCU --> HX["HX711 + load cell"]
+        MCU --> NFC["MFRC522 NFC reader"]
+        MCU --> I2C["I2C bus"]
+        I2C --> OLED["SSD1306 OLED"]
+        I2C --> BMP["BMP280 pressure"]
+        I2C --> PCF["PCF8574 x2: relays, LEDs"]
+        MCU --> TDS["Analog TDS sensor"]
+        MCU --> SW["Limit switches: lid, boil-over, level"]
+        MCU --> SRV["SG90 pod ejector"]
     end
 
-    BUCK -- 5V --> MCU
-    Power Board <-->|Ribbon: power, I2C, PID, signals| Control Board
+    BUCK -->|5V| MCU
+    PB <-->|"Ribbon: power, I2C, PID, signals"| CB
 ```
 
 | Board | Target size | Notes |
